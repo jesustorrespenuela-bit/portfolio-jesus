@@ -1,7 +1,90 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="estilos.css"><title>Tema 1 · Información, vida y cultura</title><script src="app.js" defer></script></head><body style="--c:var(--t1);--c2:var(--u1)">
-<div class="top"><a href="index.html">← Índice</a><span>Tema 1 de 3</span></div>
-<header class="portada"><div class="marca" aria-hidden="true">T1</div><span class="tejuelo">IID T1</span><h1>Información, vida y cultura</h1></header><div class="wrap"><nav class="cuadro" aria-label="Secciones"><b>Tema 1</b><ul><li><a href="#formacion">Formación universitaria</a></li><li><a href="#digital">Contexto digital</a></li><li><a href="#perfiles">Nuevos perfiles</a></li><li><a href="#conclusion">Conclusión</a></li></ul></nav>
-<article>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{--ink:#111;--c:#38BDF8;--soft:color-mix(in srgb,var(--c) 22%,#fff)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;color:var(--ink);font:17px/1.7 "Instrument Sans",system-ui,sans-serif;background-color:#F7F7FB;background-image:linear-gradient(#e1e5f2 1px,transparent 1px),linear-gradient(90deg,#e1e5f2 1px,transparent 1px);background-size:32px 32px}
+h1,h2,h3,.sticker,.btn,.indice a,.cab{font-family:"Bricolage Grotesque","Arial Black",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
+.cab{display:flex;justify-content:space-between;padding:.8rem clamp(1rem,4vw,3rem);background:#fff;border-bottom:3px solid var(--ink);font-weight:700}
+.cab a{text-decoration:none}.cab a:hover{background:var(--c)}
+.marquee{overflow:hidden;background:var(--ink);color:#fff;border-bottom:3px solid var(--ink);white-space:nowrap}
+.marquee div{display:inline-block;padding:.5rem 0;font:700 1rem "Bricolage Grotesque",sans-serif;animation:corre 28s linear infinite}
+.marquee:hover div{animation-play-state:paused}
+.portada{background:var(--c);border-bottom:3px solid var(--ink);padding:3.5rem clamp(1rem,6vw,5rem) 4rem;position:relative;overflow:hidden}
+.portada h1{font-size:clamp(2.4rem,8vw,5.5rem);line-height:.98;font-weight:800;margin:0;max-width:14ch;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+.sticker{position:absolute;right:clamp(1rem,6vw,5rem);top:2rem;width:7.5rem;height:7.5rem;border-radius:50%;background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);display:grid;place-items:center;font-size:2.6rem;font-weight:800;animation:wiggle 3s ease-in-out infinite}
+.tag{display:inline-block;background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:.1rem .8rem;font:700 .95rem "Bricolage Grotesque",sans-serif;margin-bottom:1.2rem}
+main{max-width:860px;margin:0 auto;padding:2.5rem 1.2rem 1rem}
+.indice{margin-bottom:3.5rem}
+.indice h2{margin-top:0}
+.indice nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.indice a{display:flex;justify-content:space-between;gap:1rem;background:#fff;border:3px solid var(--ink);padding:.75rem 1rem;font-weight:700;text-decoration:none;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s,background .15s}
+.indice a:hover{background:var(--c);transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink)}
+.indice a:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+.indice a span{display:inline-block;transition:transform .2s}.indice a:hover span{transform:translateY(4px)}
+article section{margin-bottom:3.5rem;scroll-margin-top:1rem}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.1;font-weight:800;margin:0 0 1.2rem}
+h2 b,h2{background:linear-gradient(transparent 60%,var(--c) 60%);display:inline;padding:0 .2em;margin-left:-.2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+article h2{display:inline}article h2+*{margin-top:1.2rem}
+section>h2{display:inline-block}
+h3{font-size:1.15rem;font-weight:800;margin:1.6rem 0 .4rem}
+.nota{background:var(--soft);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:1rem 1.3rem;margin:1.5rem 0 1.5rem}
+.etapas{list-style:none;padding:0;margin:1.5rem 0;display:grid;gap:1rem}
+.etapas li{background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:.9rem 1.2rem .9rem 3.2rem;position:relative;transition:transform .15s}
+.etapas li:hover{transform:translate(-3px,-3px) rotate(-.4deg)}
+.etapas li::before{content:"✱";position:absolute;left:.8rem;top:.6rem;font-size:1.6rem;color:var(--ink);background:var(--c);width:1.8rem;height:1.8rem;line-height:1.8rem;text-align:center;border:2px solid var(--ink);animation:gira 6s linear infinite}
+.etapas b{font-family:"Bricolage Grotesque",sans-serif}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;list-style:none}
+.chips li{background:#fff;border:2px solid var(--ink);padding:.1rem .8rem;font-weight:600;font-size:.92rem;box-shadow:3px 3px 0 var(--ink);transition:transform .15s,background .15s}
+.chips li:hover{background:var(--c);transform:translate(-2px,-2px) rotate(-2deg)}
+.tabla{overflow-x:auto;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);background:#fff;margin:1.2rem 0}
+table{border-collapse:collapse;width:100%;font-size:.93rem;line-height:1.5}
+th,td{padding:.65rem .85rem;text-align:left;vertical-align:top;border:2px solid var(--ink)}
+th{background:var(--c);font-family:"Bricolage Grotesque",sans-serif;font-weight:800}
+tr:hover td{background:var(--soft)}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;margin:1.6rem 0}
+.flow>div{background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:.9rem 1rem;position:relative;font-size:.92rem;line-height:1.5}
+.flow>div:not(:last-child)::after{content:"➜";position:absolute;right:-2.1rem;top:50%;font-size:1.6rem;font-weight:800;animation:empuja 1s ease-in-out infinite}
+.flow h3{margin:-.9rem -1rem .6rem;padding:.4rem 1rem;background:var(--c);border-bottom:3px solid var(--ink)}
+.flow ul{margin:0;padding-left:1.1rem}
+.arbol div{background:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:.4rem 1rem;margin:.7rem 0;font:700 1rem "Bricolage Grotesque",sans-serif;width:fit-content;transition:transform .15s}
+.arbol div:hover{background:var(--c);transform:translateX(8px)}
+.pie{display:flex;justify-content:space-between;gap:1rem;max-width:860px;margin:0 auto;padding:1rem 1.2rem 5rem}
+.btn{background:var(--c);border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:.6rem 1.3rem;font-weight:800;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:1px 1px 0 var(--ink)}
+.subir{position:fixed;right:1rem;bottom:1rem;z-index:20;background:#fff}
+.hero{background:#fff;border-bottom:3px solid var(--ink);padding:4rem clamp(1rem,6vw,5rem) 4rem}
+.hero h1{font-size:clamp(2.4rem,8vw,5.8rem);line-height:.98;font-weight:800;max-width:14ch;margin:0 0 1.2rem;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+.hero p{max-width:50ch;font-size:1.15rem}
+.hero mark{background:#FACC15;padding:0 .15em}
+.cajon{max-width:1080px;margin:0 auto;padding:3rem 1.2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem}
+.carpeta{display:block;background:var(--c);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:1.6rem;text-decoration:none;position:relative;min-height:300px;transition:transform .2s,box-shadow .2s;animation:pop .6s cubic-bezier(.2,1.4,.4,1) both}
+.carpeta:nth-child(1){transform:rotate(-1.2deg);animation-delay:.2s}.carpeta:nth-child(2){transform:rotate(.8deg);animation-delay:.35s}.carpeta:nth-child(3){transform:rotate(-.6deg);animation-delay:.5s}
+.carpeta:hover{transform:translate(-6px,-6px) rotate(0);box-shadow:14px 14px 0 var(--ink)}
+.carpeta .n{font:800 5rem/1 "Bricolage Grotesque",sans-serif;display:block}
+.carpeta h2{background:none;display:block;font-size:1.5rem;margin:.3rem 0 .6rem;padding:0}
+.carpeta p{margin:.4rem 0;font-size:.95rem;line-height:1.5}
+.carpeta .btn{display:inline-block;background:#fff;margin-top:.8rem;padding:.3rem 1rem}
+.fuentes{max-width:1080px;margin:0 auto;padding:0 1.2rem 3rem;font-size:.9rem}
+@keyframes corre{to{transform:translateX(-50%)}}
+@keyframes pop{from{opacity:0;scale:.85}to{opacity:1;scale:1}}
+@keyframes wiggle{50%{rotate:10deg}}
+@keyframes gira{to{rotate:360deg}}
+@keyframes empuja{50%{transform:translateX(7px)}}
+@supports (animation-timeline:view()){
+article section{animation:rev linear both;animation-timeline:view();animation-range:entry 0% entry 30%}
+@keyframes rev{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:none}}
+.prog{position:fixed;top:0;left:0;right:0;height:8px;background:var(--c);border-bottom:2px solid var(--ink);transform-origin:0 50%;z-index:30;animation:prog linear both;animation-timeline:scroll()}
+@keyframes prog{from{transform:scaleX(0)}to{transform:scaleX(1)}}}
+@media(max-width:800px){.flow{grid-template-columns:1fr}.flow>div:not(:last-child)::after{content:"⬇";right:50%;top:auto;bottom:-2.3rem}.sticker{width:4.5rem;height:4.5rem;font-size:1.6rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style><title>Tema 1 · Información, vida y cultura</title></head><body style="--c:#38BDF8"><div class="prog"></div>
+<div class="cab"><a href="index.html">← Índice</a><span>Tema 1 de 3</span></div>
+<div class="marquee" aria-hidden="true"><div>Información, vida y cultura ✱ Información, vida y cultura ✱ Información, vida y cultura ✱ Información, vida y cultura ✱ Información, vida y cultura ✱ Información, vida y cultura ✱ Información, vida y cultura ✱ Información, vida y cultura ✱ </div></div>
+<header class="portada"><span class="tag">IID T1</span><h1>Información, vida y cultura</h1><div class="sticker" aria-hidden="true">T1</div></header>
+<main id="top"><div class="indice" id="indice"><h2>En este tema</h2><nav aria-label="Secciones"><a href="#formacion">Formación universitaria<span>↓</span></a><a href="#digital">Contexto digital<span>↓</span></a><a href="#perfiles">Nuevos perfiles<span>↓</span></a><a href="#conclusion">Conclusión<span>↓</span></a></nav></div><article>
 <section id="formacion"><h2>Formación universitaria en Información y Documentación</h2>
 <p>En algo más de tres décadas de estudios propios en España se distinguen tres etapas.</p>
 <ol class="etapas">
@@ -19,5 +102,6 @@
 <ul class="chips"><li>Digital Marketing Manager</li><li>Community Manager</li><li>Comunicación digital</li><li>Social Media</li><li>Big Data</li><li>Gestor de contenidos (CMS)</li><li>SEO</li><li>E-Commerce</li><li>Ciberseguridad</li></ul></section>
 <section id="conclusion"><h2>Conclusión</h2>
 <div class="nota">Se ha pasado de los perfiles tradicionales (bibliotecario, archivero y documentalista) a perfiles ligados al marketing, la comunicación y la gestión de contenidos digitales. Los planes de estudio deben partir de nuestros conocimientos y sumar competencias multidisciplinares, con una mentalidad flexible ante el cambio continuo.</div></section>
-</article></div>
-<div class="pie"><a href="index.html">← Índice</a><a href="tema2.html">Tema 2 →</a></div></body></html>
+</article></main>
+<div class="pie"><a class="btn" href="index.html">← Índice</a><a class="btn" href="tema2.html">Tema 2 →</a></div>
+<a class="btn subir" href="#indice">↑ Índice</a></body></html>
